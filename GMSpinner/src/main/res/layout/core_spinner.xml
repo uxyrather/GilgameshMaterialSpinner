@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutSpinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        tools:hint="Your Hint">
+
+        <EditText
+            android:id="@+id/editTextSpinner"
+            style="@style/editTextLabel"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:gravity="start|center_vertical"
+            android:inputType="none"
+            android:lines="1"
+            android:maxLines="1"
+            android:saveEnabled="false"
+            android:selectAllOnFocus="false"
+            android:textIsSelectable="false"
+            tools:text="Your Selection" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutSpinnerActingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        tools:hint="">
+
+        <EditText
+            android:visibility="gone"
+            android:enabled="false"
+            android:textColor="#747474"
+            android:text="### ### ###"
+            android:id="@+id/editTextSpinnerActingView"
+            style="@style/editTextLabel"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:gravity="start|center_vertical"
+            android:inputType="none"
+            android:lines="1"
+            android:maxLines="1"
+            android:saveEnabled="false"
+            android:selectAllOnFocus="false"
+            android:textIsSelectable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+
+</FrameLayout>
