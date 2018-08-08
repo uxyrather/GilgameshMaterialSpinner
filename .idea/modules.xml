@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GMSpinner/GMSpinner.iml" filepath="$PROJECT_DIR$/GMSpinner/GMSpinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/GilgameshMaterialSpinner.iml" filepath="$PROJECT_DIR$/GilgameshMaterialSpinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/material-spinner/material-spinner.iml" filepath="$PROJECT_DIR$/material-spinner/material-spinner.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,31 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'material-spinner'
+
+    publishedGroupId = 'com.automayta'
+    libraryName = 'material-spinner'
+    artifact = 'material-spinner'
+
+    libraryDescription = 'Material Design Styled Spinner'
+
+    gitUrl = 'https://github.com/uxyrather/GilgameshMaterialSpinner.git'
+    siteUrl = 'https://github.com/uxyrather/GilgameshMaterialSpinner'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'uxyrahter'
+    developerName = 'Uzair Rather'
+    developerEmail = 'uxyrather@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'https://github.com/uxyrather/GilgameshMaterialSpinner/blob/master/LICENSE'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 28
 
@@ -23,8 +48,10 @@ android {
         }
     }
 
+    tasks.withType(Javadoc).all {
+        enabled = false
+    }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -39,6 +66,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
 repositories {
     mavenCentral()
 }
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+
+
+
+

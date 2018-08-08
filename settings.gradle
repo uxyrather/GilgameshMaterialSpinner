@@ -1,1 +1,1 @@
-include ':app', ':GMSpinner'
+include ':app', ':material-spinner'

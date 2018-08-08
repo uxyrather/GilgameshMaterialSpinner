@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import java.util.*
-import java.util.Map
 
 /**
  * Created By Uzair Mohammad Rather On 09/25/2017
@@ -27,8 +26,8 @@ class CoreSpinnerPopDownWindowRVAdapter(private val mValues: HashMap<Any, Any>, 
         var i = 0
         for (mItem in mValues.entries) {
             if (position == i) {
-                holder.key = (mItem as Map.Entry<*, *>).key
-                holder.value = (mItem as Map.Entry<*, *>).value
+                holder.key = (mItem as MutableMap.MutableEntry<*, *>).key
+                holder.value = (mItem as MutableMap.MutableEntry<*, *>).value
                 break
             }
             i++

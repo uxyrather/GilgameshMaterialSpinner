@@ -16,7 +16,6 @@ import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.PopupWindow
 import java.util.*
-import java.util.Map
 
 /**
  * Created by Uzair.Mohammad on 9/21/2017.
@@ -200,18 +199,18 @@ class CoreSpinnerView : FrameLayout, View.OnTouchListener, CoreSpinnerPopDownWin
             var key = this.defaultPosition
             for (mItem in dropDownItems!!.entries) {
                 if (position is Int) {
-                    key = Integer.valueOf((mItem as Map.Entry<*, *>).key.toString())
-                    if (key as Int? === position as Int?) {
-                        value = (mItem as Map.Entry<*, *>).value.toString()
+                    key = Integer.valueOf((mItem as MutableMap.MutableEntry<*, *>).key.toString())
+                    if (key === position as Int?) {
+                        value = (mItem as MutableMap.MutableEntry<*, *>).value.toString()
                         editTextSpinner!!.setText(value)
                         editTextSpinner!!.tag = key
                         break
 
                     }
                 } else if (position is String) {
-                    key = (mItem as Map.Entry<*, *>).key.toString()
-                    if ((key as String).equals((position as String?)!!, ignoreCase = true)) {
-                        value = (mItem as Map.Entry<*, *>).value.toString()
+                    key = (mItem as MutableMap.MutableEntry<*, *>).key.toString()
+                    if ((key).equals((position as String?)!!, ignoreCase = true)) {
+                        value = (mItem as MutableMap.MutableEntry<*, *>).value.toString()
                         editTextSpinner!!.setText(value)
                         editTextSpinner!!.tag = key
                         break
