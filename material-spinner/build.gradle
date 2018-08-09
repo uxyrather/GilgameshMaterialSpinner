@@ -15,7 +15,7 @@ ext {
     gitUrl = 'https://github.com/uxyrather/GilgameshMaterialSpinner.git'
     siteUrl = 'https://github.com/uxyrather/GilgameshMaterialSpinner'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'uxyrahter'
     developerName = 'Uzair Rather'
@@ -32,7 +32,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
